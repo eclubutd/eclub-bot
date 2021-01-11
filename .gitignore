@@ -1,0 +1,19 @@
+.vscode/
+
+config/.env
+.env*
+config/.env
+
+  
+venv/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+
+# Flask stuff:
+instance/
+.webassets-cache
