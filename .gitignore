@@ -3,7 +3,7 @@
 config/.env
 .env*
 config/.env
-
+src/.env
   
 venv/
 
@@ -18,6 +18,9 @@ __pycache__/
 instance/
 .webassets-cache
 
+#log
+src/nohup.out
+nohop.out
 
 #AWS 
 eclubkey.pem
