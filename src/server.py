@@ -2,10 +2,10 @@ from slack.errors import SlackApiError
 from slackeventsapi import SlackEventAdapter
 from flask import Flask, request, Response
 import creds
-from officer_team_util import (send_slack_message_new_member)
 from messages import NewMemberMessage
 import os
 from pprint import pprint
+import officer_util
 import time
 import re
 
@@ -28,7 +28,8 @@ def member_join(payload):
             new_member  = NewMemberMessage(member_id = user_id)
             msg = new_member.get_message()
             response = client.chat_postMessage(**msg)
-    except:
+            officer_util.send_slack_new_member(member_id)
+    except Exception as e:
         pass
   
 
