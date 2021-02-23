@@ -20,7 +20,7 @@ instance/
 
 #log
 src/nohup.out
-nohop.out
+nohup.out
 
 #AWS 
 eclubkey.pem

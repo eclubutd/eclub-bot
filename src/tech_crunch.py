@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 from datetime import datetime, date, timedelta
 from pprint import pprint
-from config import creds
+import creds
 import requests
 
 # REMEMBER: this only works on weekdays (TC does not produce articles on Sat/Sun)

@@ -2,6 +2,8 @@ from slack.errors import SlackApiError
 from slackeventsapi import SlackEventAdapter
 from flask import Flask, request, Response
 import creds
+from officer_team_util import (send_slack_message_new_member)
+from messages import NewMemberMessage
 import os
 from pprint import pprint
 import time
@@ -23,16 +25,20 @@ def member_join(payload):
         pprint(user_id)
         channel_id = event.get('channel')
         if(channel_id == general_channel_id):
-            client.chat_postMessage(channel=f"{user_id}",text=f"Hello <@{user_id}>! welcome to this channel")
+            new_member  = NewMemberMessage(member_id = user_id)
+            msg = new_member.get_message()
+            response = client.chat_postMessage(**msg)
     except:
         pass
-
   
 
 @slack_events_adapter.on('reaction_added')
 def reaction_test(payload):
     pprint(payload)
 
+@app.route('/eclub_newsletter')
+def send_newsletter():
+    print("received request")
 
 
 @app.route('/newsletter',methods=['POST'])
@@ -68,9 +74,6 @@ def newsletter() -> Response:
     text = usr_msg)
   return Response(), 200
 
-@app.route('/')
-def hello():
-  return "Hello World"
 
 if __name__ == "__main__":
   app.run(host='0.0.0.0',debug=True)
