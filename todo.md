@@ -1,6 +1,6 @@
 # **Launch Features**
 
-## Welcome Message
+## Welcome Message (done)
  - Welcome to the UT Dallas Entrepreneurship Club! Our mission statement
  - link to our notion page -> further links 
  - prompt them to make an introduction in the #intros channel

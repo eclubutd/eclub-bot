@@ -18,7 +18,7 @@ client = creds.connect_slack()
 def send_slack_new_member(member_id):
   ''' goal: alert team when new member has joined '''
   
-  webhook_url = creds.get_slack_test_webhook_url()
+  webhook_url = creds.get_slack_webhook_url(channel = "robots")
 
   try:
     member_info = client.users_info(user = member_id).get('user').get('profile')

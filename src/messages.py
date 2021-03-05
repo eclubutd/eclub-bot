@@ -68,15 +68,10 @@ class EventMessage(DirectMessage):
             'text': {
                 'type':'mrkdwn',
                 'text':(
-                    f'Hey <@{self.member_id}> :wave::skin-tone-5:\n\n'
+                    f'Hey <@{self.member_id}>! We just wanted to remind you that we are having our Personal Branding 101 Event right now! till 8 PM CST\n\n'
 
-                    f"We just wanted to send you a final reminder that our *Spring Kickoff* is today from _7:00-8:00 PM_ :hourglass: We know there are so many Zoom/Teams events right now :yawning_face: and we'd all rather be at Blackstone Launchpad, but our team would love to see you tonight even if you can only attend for a few minutes! \n\n "
-
-                    f"You will get to meet other members through our icebreaker, get a brief rundown of our exciting Spring events/projects, ways for you to get involved, provide feedback of what you'd like to see from us, and meet our new officers!\n\n"
-                    f">RSVP on Startup Tree <https://utdallas.startuptree.co/event/s/6S8m9ocpVnbC9hLymDK4vS/E-Club-Spring-Kickoff| here>\n"
-                    f">MSFT Teams: Join <https://bit.ly/3arpmkC| here>\n\n"
-
-                    f"See you there! :dancing_pikachu:  - E-Club Team "
+                    f"The speaker is <https://www.linkedin.com/in/emchvn|Emily Chan> who is co-founder of Sparkline and a talent sourcer at Microsoft! She is talking about the importance of personal branding in one's professional life.\n\nThere will also be a Q&A session after that!!!\n\n"
+                    f">MSFT Teams: Join <https://teams.microsoft.com/l/meetup-join/19%3a717c7166782b45809a38cc5386a05f6f%40thread.tacv2/1611456140026?context=%7b%22Tid%22%3a%228d281d1d-9c4d-4bf7-b16e-032d15de9f6c%22%2c%22Oid%22%3a%22875bf001-5804-4c00-86ae-47f481ceaa18%22%7d| here>\n\n"
 
             )
 

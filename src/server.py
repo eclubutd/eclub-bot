@@ -23,14 +23,15 @@ def member_join(payload):
         event = payload.get('event')
         user_id = event.get('user')
         pprint(user_id)
+
         channel_id = event.get('channel')
         if(channel_id == general_channel_id):
             new_member  = NewMemberMessage(member_id = user_id)
             msg = new_member.get_message()
             response = client.chat_postMessage(**msg)
-            officer_util.send_slack_new_member(member_id)
+            officer_util.send_slack_new_member(user_id)
     except Exception as e:
-        pass
+        print(e)
   
 
 @slack_events_adapter.on('reaction_added')

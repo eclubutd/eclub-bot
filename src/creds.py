@@ -12,5 +12,6 @@ def connect_slack():
 def get_smmry_key():
     return os.environ['SMMRY_API_KEY']
 
-def get_slack_test_webhook_url():
-    return os.environ['SLACK_TEST_WEBHOOK_URL']
+
+def get_slack_webhook_url(channel):
+    return os.environ[f'SLACK_{channel.upper()}_WEBHOOK_URL']
