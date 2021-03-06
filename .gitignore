@@ -18,10 +18,9 @@ instance/
 .webassets-cache
 
 #log
-src/nohup.out
 nohup.out
+src/nohup.out
 
 #logs
 logs/
-
 

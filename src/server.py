@@ -3,6 +3,8 @@ from slackeventsapi import SlackEventAdapter
 from flask import Flask, request, Response
 import creds
 from messages import NewMemberMessage
+from club_airtable import CurrentMemberBase
+
 import os
 from pprint import pprint
 import officer_util
@@ -29,6 +31,7 @@ def member_join(payload):
             new_member  = NewMemberMessage(member_id = user_id)
             msg = new_member.get_message()
             response = client.chat_postMessage(**msg)
+            CurrentMemberBase().add_new_member(user_id)
             officer_util.send_slack_new_member(user_id)
     except Exception as e:
         print(e)
